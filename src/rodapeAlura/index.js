@@ -21,16 +21,12 @@
                                         xmlns:xlink="http://www.w3.org/1999/xlink">
                                         <use xlink:href="#icon-categorias-${categoria.slug}"></use>
                                     </svg></div>
-                                <span class="cfg___categories__link__text">Cursos de</span>
-                                <h4 class="cfg___categories__link__category-name">${categoria.nome}</h4>
+                                <h3 class="cfg___categories__link__category-name"><span class="cfg___categories__link__text">Cursos de</span> ${categoria.nome}</h3>
                             </div>
                         </a>
                         <nav class="cfg___categories__calls">
                             ${subcategorias.map((subcategoria, index) => (
-                `<a target="_blank" href="https://alura.com.br/cursos-online-${categoria.slug}/${subcategoria.slug}" class="cfg___categories__calls__description">
-                                    ${subcategoria.nome}
-                                </a>
-                                ${ index < 3
+                `<a target="_blank" href="https://alura.com.br/cursos-online-${categoria.slug}/${subcategoria.slug}" class="cfg___categories__calls__description">${subcategoria.nome}</a>${ index < 3
                     ? '<span class="cfg___categories__calls__description-separator">, </span>'
                     : ''
                 }

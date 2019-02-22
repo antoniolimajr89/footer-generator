@@ -59,7 +59,7 @@
 
         document.querySelector('#rodape-code')
             .innerText = (
-                `<div class="cfg___">${htmlCode.replace(/\n/g, '')}</div><style>${cssCode.replace(/\n/g, '')}</style>`
+                `<div class="cfg___">${htmlCode.replace(/\n/g, '')} <style>${cssCode.replace(/\n/g, '')}</style></div>`
             )
 
     })

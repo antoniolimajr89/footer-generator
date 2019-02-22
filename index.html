@@ -10,8 +10,12 @@
             font-family: sans-serif;
         }
 
-        #rodape-preview-container {
-            
+        .wrap__rodape-code {
+            background: #dddddd; 
+            padding: 15px;
+            overflow: scroll;
+            border-radius: 5px;
+            border:5px solid #333333;
         }
     </style>
 </head>
@@ -23,15 +27,14 @@
     <div>
         <h2>Preview</h2>
         
-        <!-- <button data-clipboard-target="#rodape-code">
-            Copiar
-        </button> -->
         <div id="rodape-preview-container"></div>
 
         <h2>Código</h2>
-        <textarea id="rodape-code" style="overflow: hidden; white-space: nowrap;"></textarea>
-        
-        
+        <div class="wrap__rodape-code">
+            <code id="rodape-code" style="white-space: nowrap;"></code>
+        </div>
+
+
     </div>
 </section>
 

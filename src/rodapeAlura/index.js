@@ -58,10 +58,9 @@
         const htmlCode = document.querySelector('#rodape-preview-container').innerHTML
 
         document.querySelector('#rodape-code')
-            .innerText = `
-                <div class="cfg___">${htmlCode.replace(/\n/g, '')}</div>
-                <style>${cssCode.replace(/\n/g, '')}</style>
-            `
+            .innerText = (
+                `<div class="cfg___">${htmlCode.replace(/\n/g, '')}</div><style>${cssCode.replace(/\n/g, '')}</style>`
+            )
 
     })
 

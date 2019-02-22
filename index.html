@@ -1,0 +1,434 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Gerador de Rodapés da Caelum</title>
+</head>
+
+<h1>Gerador de Rodapés da Caelum</h1>
+
+<button class="rodape-alura" data-rodape="rodape-alura">0</button>
+
+
+<div id="rodape-preview-container"></div>
+
+
+<script src="./src/rodapeAlura/index.js"></script>
+
+
+<style id="rodape-alura">
+    * {
+        box-sizing: border-box;
+    }
+    @media (min-width: 550px) {
+        .cfg___container {
+            padding-right: 25px;
+            padding-left: 25px;
+        }
+    }
+
+
+
+    .cfg___container {
+        display: flex;
+        font-family: Arial, sans-serif;
+    }
+
+    .cfg___categories .cfg___container {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0;
+    }
+
+    .cfg___featured-degree__list__item__title--engenheiro-front-end {
+        color: #6ec3ea;
+    }
+
+    .cfg___featured-degree__list__item__title--engenheiro-mobile {
+        color: #f7b337;
+    }
+
+    .cfg___featured-degree__list__item__title--engenheiro-ux {
+        color: #dc6ebe;
+    }
+
+    .cfg___featured-degree__list__item--engenheiro-front-end:before {
+        background-image: linear-gradient(to top, #7ab5f5, #7ae8f5);
+    }
+
+    .cfg___featured-degree__list__item--engenheiro-mobile:before {
+        background-image: linear-gradient(to bottom, #ffd844, #ffc344);
+    }
+
+    .cfg___featured-degree__list__item--engenheiro-ux:before {
+        background-image: linear-gradient(to top, #9f6edc, #d86edc);
+    }
+
+    .cfg___categories__link__category-name {
+        margin: 0 0 6px;
+    }
+
+    .cfg___categories--mobile .cfg___categories__link__text,
+    .cfg___categories--mobile .cfg___categories__link__category-name {
+        color: #ffba05;
+    }
+
+    .cfg___categories--programacao .cfg___categories__link__text,
+    .cfg___categories--programacao .cfg___categories__link__category-name {
+        color: #00c86f;
+    }
+
+    .cfg___categories--front-end .cfg___categories__link__text,
+    .cfg___categories--front-end .cfg___categories__link__category-name {
+        color: #6BD1FF;
+    }
+
+    .cfg___categories--design-ux .cfg___categories__link__text,
+    .cfg___categories--design-ux .cfg___categories__link__category-name {
+        color: #DC6EBE;
+    }
+
+    .cfg___categories--infraestrutura .cfg___categories__link__text,
+    .cfg___categories--infraestrutura .cfg___categories__link__category-name {
+        color: #F16165;
+    }
+
+    .cfg___categories--business .cfg___categories__link__text,
+    .cfg___categories--business .cfg___categories__link__category-name {
+        color: #2D8FE3;
+    }
+
+    .cfg___categories--data-bi .cfg___categories__link__text,
+    .cfg___categories--data-bi .cfg___categories__link__category-name {
+        color: #9cd33b;
+    }
+
+    @media(min-width: 768px) {
+
+        .cfg___categories--mobile .cfg___categories__link:before,
+        .cfg___categories--programacao .cfg___categories__link:before,
+        .cfg___categories--front-end .cfg___categories__link:before,
+        .cfg___categories--design-ux .cfg___categories__link:before,
+        .cfg___categories--infraestrutura .cfg___categories__link:before,
+        .cfg___categories--business .cfg___categories__link:before .categories--data-bi .cfg___categories__link:before {
+            height: 42px;
+            width: 42px;
+            background-size: 28px;
+            margin-right: 15px;
+        }
+
+    }
+
+    @media(min-width: 1024px) {
+        .cfg___categories--mobile .cfg___categories__link {
+            color: #ffba05;
+        }
+
+        .cfg___categories--mobile:before {
+            background-color: #FFBA05;
+        }
+
+        .cfg___categories--programacao .cfg___categories__link {
+            color: #00c86f;
+        }
+
+        .cfg___categories--programacao:before {
+            background-color: #00c86f;
+        }
+
+        .cfg___categories--front-end .cfg___categories__link {
+            color: #6BD1FF;
+        }
+
+        .cfg___categories--front-end:before {
+            background-color: #6BD1FF;
+        }
+
+        .cfg___categories--design-ux .cfg___categories__link {
+            color: #DC6EBE;
+        }
+
+        .cfg___categories--design-ux:before {
+            background-color: #DC6EBE;
+        }
+
+        .cfg___categories--infraestrutura .cfg___categories__link {
+            color: #F16165;
+        }
+
+        .cfg___categories--infraestrutura:before {
+            background-color: #F16165;
+        }
+
+        .cfg___categories--business .cfg___categories__link {
+            color: #2D8FE3;
+        }
+
+        .cfg___categories--business:before {
+            background-color: #2D8FE3;
+        }
+
+        .cfg___categories--data-bi .cfg___categories__link {
+            color: #9cd33b;
+        }
+
+        .cfg___categories--data-bi:before {
+            background-color: #9cd33b;
+        }
+
+    }
+
+    .cfg___categories {
+        font-size: 14px;
+        background-color: #FFF;
+        margin-bottom: 4em;
+        box-shadow: 4px 1px 7px 1px rgba(82, 95, 107, .1);
+    }
+
+    .cfg___categories .cfg___container {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0;
+    }
+
+    .cfg___categories__wrapper {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        flex-basis: 50%;
+    }
+
+    .cfg___categories__wrapper:nth-child(odd) {
+        border-right: 1px solid #e4f0ff;
+        border-bottom: 1px solid #e4f0ff;
+    }
+
+    .cfg___categories__wrapper:nth-child(even) {
+        border-bottom: 1px solid #e4f0ff;
+    }
+
+    .cfg___categories__wrapper:nth-child(7),
+    .cfg___categories__wrapper:nth-child(8) {
+        border-bottom: 0;
+    }
+
+    .cfg___categories__link {
+        display: flex;
+        padding: 1em;
+        line-height: 1.2;
+        color: #FFF;
+        text-decoration: none;
+        width: 100%;
+        align-items: center
+    }
+
+    .cfg___categories__link__text {
+        font-size: 11px;
+    }
+
+    .cfg___categories__link__category-name {
+        font-size: 12px;
+    }
+
+    .cfg___categories__calls__description:hover,
+    .cfg___categories__calls__link-see-more:hover {
+        text-decoration: underline;
+    }
+
+    .cfg___categories__calls {
+        display: none;
+    }
+
+    .cfg___categories__calls a {
+        color: rgba(82, 92, 101, 0.50);
+    }
+
+    .cfg___categories__svg-wrapper svg {
+        height: 22px;
+        width: 24px;
+    }
+
+    .cfg___categories__wrapper__links .cfg___categories__svg {
+        fill: #FFFFFF;
+        height: 17px;
+        width: 17px;
+    }
+
+    .cfg___categories__svg-wrapper {
+        height: 33px;
+        width: 33px;
+        display: block;
+        border-radius: 50%;
+        padding: 7px 0 0 7px;
+        margin: 0 0 10px 0;
+    }
+
+    .cfg___svg-mobile__background {
+        background-color: #ffba05;
+        padding: 7.5px 0 0 8px;
+    }
+
+    .cfg___svg-programacao__background {
+        background-color: #00c86f;
+        padding: 8px 0 0 7px;
+    }
+
+    .cfg___svg-front-end__background {
+        background-color: #6BD1FF;
+        padding: 8px 0 0 9px;
+    }
+
+    .cfg___svg-infraestrutura__background {
+        background-color: #F16165;
+        padding: 8px 0 0 8px;
+    }
+
+    .cfg___svg-design-ux__background {
+        background-color: #DC6EBE;
+        padding: 8px 0 0 8px;
+    }
+
+    .cfg___svg-business__background {
+        background-color: #2D8FE3;
+        padding: 8px 0 0 8px;
+    }
+
+    .cfg___svg-data-bi__background {
+        background-color: #9cd33b;
+        padding: 8px 0 0 8px;
+    }
+
+    @media(min-width: 768px) {
+
+        .cfg___categories__link {
+            padding: 25px 0px 25px 45px;
+        }
+
+        .cfg___categories__wrapper {
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            flex-basis: calc(100% / 3);
+        }
+
+        .cfg___categories {
+            margin-bottom: 2.5em;
+        }
+
+        .cfg___categories__wrapper {
+            border-right: 1px solid #e4f0ff;
+            border-bottom: 1px solid #e4f0ff;
+        }
+
+        .cfg___categories__wrapper:nth-child(n+4) {
+            border-bottom: 1px solid #e4f0ff;
+        }
+
+        .cfg___categories__wrapper:nth-child(n+7) {
+            border-bottom: 0;
+        }
+
+        .cfg___categories__wrapper:nth-child(3n+3) {
+            border-right: 0;
+        }
+
+        .cfg___categories__link__text {
+            font-size: 14px;
+        }
+
+        .cfg___categories__link__category-name {
+            font-size: 16px;
+        }
+
+    }
+
+    @media(min-width: 1024px) {
+        .cfg___categories {
+            background: #FFFFFF;
+            box-shadow: 4px 2px 7px 0 rgba(82, 95, 107, 0.10);
+            margin-bottom: 6em;
+        }
+
+        .cfg___categories .cfg___container {
+            flex-direction: row;
+            flex-wrap: nowrap;
+        }
+
+        .cfg___categories__link {
+            display: flex;
+            flex-grow: 1;
+            flex-direction: column;
+            font-size: .928em;
+            padding: calc(5px + 1.2em) 0 0;
+            align-items: flex-start;
+            margin-bottom: .7em;
+        }
+
+        .cfg___categories__link__category-name {
+            font-size: 1.3em;
+        }
+
+        .cfg___categories__wrapper:nth-child(even) {
+            border: none;
+        }
+
+        .cfg___categories__wrapper:nth-child(n+3) {
+            border: none;
+        }
+
+        .cfg___categories__wrapper:not(:nth-child(3n)) {
+            border: none;
+        }
+
+        div.categories__wrapper {
+            background-color: inherit;
+        }
+
+        .cfg___categories__wrapper__links {
+            padding: 0 .9em;
+        }
+
+        .cfg___categories__calls {
+            display: block;
+            font-size: .9em;
+            margin-bottom: 1.2em;
+            color: rgba(82, 92, 101, 0.50);
+            width: 95%;
+        }
+
+        .cfg___categories__calls__description,
+        .cfg___categories__calls__link-see-more {
+            text-decoration: none;
+            color: rgba(82, 92, 101, 0.5)
+        }
+
+        .cfg___categories__wrapper:before {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 5px;
+            position: absolute;
+            left: 0;
+        }
+
+        .cfg___categories__wrapper:hover:before {
+            height: 7px;
+            transition: height .2s ease-in-out;
+        }
+    }
+
+    @media(min-width: 1280px) {
+        .cfg___categories__calls {
+            margin-bottom: 1.93em;
+        }
+
+        .cfg___categories__link {
+            padding: calc(5px + 1.785em) 0 0;
+        }
+    }
+</style>
+
+
+
+<style id="rodape-grupocaelum">
+</style>

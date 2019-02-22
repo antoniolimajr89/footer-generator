@@ -3,20 +3,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Gerador de Rodapés da Caelum</title>
+    <style>
+        * { box-sizing: border-box; }
+        html, body { margin: 0; padding: 0; }
+        .generator * {
+            font-family: sans-serif;
+        }
+
+        #rodape-preview-container {
+            
+        }
+    </style>
 </head>
 
-<h1>Gerador de Rodapés da Caelum</h1>
+<section class="generator">
+    <h1>Gerador de Rodapés da Caelum</h1>
+    
 
-<button class="rodape-alura" data-rodape="rodape-alura">0</button>
+    <div>
+        <h2>Preview</h2>
+        
+        <!-- <button data-clipboard-target="#rodape-code">
+            Copiar
+        </button> -->
+        <div id="rodape-preview-container"></div>
+        <textarea id="rodape-code" style="overflow: hidden; white-space: nowrap;"></textarea>
+        
+        
+    </div>
+</section>
 
 
-<div id="rodape-preview-container"></div>
 
+
+
+<script src="./src/libs/clipboard.min.js"></script>
 
 <script src="./src/rodapeAlura/index.js"></script>
 
 
-<style id="rodape-alura">
+<style data-css="rodape-alura">
     * {
         box-sizing: border-box;
     }
@@ -181,7 +207,7 @@
     .cfg___categories {
         font-size: 14px;
         background-color: #FFF;
-        margin-bottom: 4em;
+        /* margin-bottom: 4em; */
         box-shadow: 4px 1px 7px 1px rgba(82, 95, 107, .1);
     }
 
@@ -312,7 +338,7 @@
         }
 
         .cfg___categories {
-            margin-bottom: 2.5em;
+            /* margin-bottom: 2.5em; */
         }
 
         .cfg___categories__wrapper {
@@ -346,7 +372,7 @@
         .cfg___categories {
             background: #FFFFFF;
             box-shadow: 4px 2px 7px 0 rgba(82, 95, 107, 0.10);
-            margin-bottom: 6em;
+            /* margin-bottom: 6em; */
         }
 
         .cfg___categories .cfg___container {
@@ -419,7 +445,7 @@
 
     @media(min-width: 1280px) {
         .cfg___categories__calls {
-            margin-bottom: 1.93em;
+            /* margin-bottom: 1.93em; */
         }
 
         .cfg___categories__link {
